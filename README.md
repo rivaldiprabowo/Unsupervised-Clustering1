@@ -71,6 +71,7 @@ Berdasarkan penjelasan bisnis proses diatas, kita bisa menyimpulkan bahwa perusa
   ![Region](https://user-images.githubusercontent.com/99151517/162692568-baf1c12a-f016-4b28-9241-e4d46c07cb32.JPG)
   
 9. Dalam proses mengenali karakteristik dari setiap cluster, pertama dilakukan analisis secara umum dan sederhana berdasarkan statistik deskriptif pada setiap cluster.
+  
   ![Deskriptif](https://user-images.githubusercontent.com/99151517/162693202-29e8c957-a292-479c-948a-347441870050.JPG)
   
 10. Analisis Multivariate dilakukan untuk lebih mengetahui bagaimana karakteristik dari setiap cluster.
