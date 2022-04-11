@@ -6,7 +6,7 @@
 
 ## Latar Belakang dan Pernyataan Masalah
 <p align='justify' style="font-weight: bold;">
-Pandemi Covid-19 yang terjadi di seluruh dunia telah berdampak pada semua sektor kehidupan dan industri, salah satunya adalah di sektor industri property. Berdasarkan website <a href="https://www.abc.net.au/news/2022-03-24/six-ways-pandemic-reshaped-australias-housing-market-corelogic/100933182#:~:text=According%20to%20CoreLogic's%20Home%20Value,by%20%24173%2C805%2C%20to%20be%20%24728%2C034.)">sumber informasi</a> pada saat awal pandemi dari awal April hingga September 2020 harga property di Australia rata-rata turun hingga 2,1% akan tetapi pada awal Oktober 2020 hingga Februari 2022 harga rumah melonjak naik hingga 24.6% dan juga terdapat lonjakan dari jumlah pembeli property selama rentang tersebut. Hal ini juga tidak terlepas dari kebijakan Bank Sentral Australia yang memberlakukan relaksasi bunga bank selama rentang waktu 2020 hingga 2024 serta berbagai stimulus lainnya. 
+Pandemi Covid-19 yang terjadi di seluruh dunia telah berdampak pada semua sektor kehidupan dan industri, salah satunya adalah di sektor industri property. Berdasarkan website <a href="https://www.abc.net.au/news/2022-03-24/six-ways-pandemic-reshaped-australias-housing-market-corelogic/100933182#:~:text=According%20to%20CoreLogic's%20Home%20Value,by%20%24173%2C805%2C%20to%20be%20%24728%2C034.)">(sumber informasi)</a> pada saat awal pandemi dari awal April hingga September 2020 harga property di Australia rata-rata turun hingga 2,1% akan tetapi pada awal Oktober 2020 hingga Februari 2022 harga rumah melonjak naik hingga 24.6% dan juga terdapat lonjakan dari jumlah pembeli property selama rentang tersebut. Hal ini juga tidak terlepas dari kebijakan Bank Sentral Australia yang memberlakukan relaksasi bunga bank selama rentang waktu 2020 hingga 2024 serta berbagai stimulus lainnya. 
 
 Berdasarkan peningkatan gairah pasar property di Australia seperti yang telah dijelaskan sebelumnya, sebuah perusahaan agen property yang telah beroperasi di berbagai *Capital City* di Australia, seperti Sydney, Brisbane, Adelaide, dan Perth akan membuka kantor barunya di Melbourne sebagai salah satu *Capital City* di Australia. Pihak management perusahaan tersebut menilai bahwa pasar property Kota Melbourne memiliki potensi yang sangat bagus di masa depan. Hal ini berdasarkan kepada keadaan Kota Melbourne yang telah bebas dari *lockdown*, peningkatan konsumsi masyarakat, peningkatan sektor ekonomi, dan banyaknya lapangan pekerjaan yang dibuka [(sumber informasi)](https://propertyupdate.com.au/property-investment-melbourne/#is-it-the-right-time-to-get-into-the-melbourne-property-market).
 
@@ -40,3 +40,50 @@ Secara umum bisnis proses pada pasar property adalah:
 5. Penjualan property di Kota Melbourne dapat melalui iklan langsung, melalui agen property, atau melalui proses pelelangan (auction).
 
 Berdasarkan penjelasan bisnis proses diatas, kita bisa menyimpulkan bahwa perusahaan agen property hanya tertarik terhadap property yang masih bisa dibeli atau `Available` dan tidak mungkin tertarik kepada property yang sudah terjual `Sold`, sehingga **dalam proses analisis dan pengelompokan kluster, saya hanya akan menggunakan data property yang `Available`.**
+</p>
+
+## Hasil Modelling dan Analisis Property pada Kota Melbourne
+<p align='justify' style="font-weight: bold;">
+1. **Data yang digunakan** pada proses analisis dan pemodelan hanya menggunakan data property yang sekiranya **dapat dijual dan dapat di akuisisi oleh pihak Perusahaan Property (Method: SP,PI,SA,VB)**. Karena berdasarkan bisnis proses, perusahaan agen property hanya tertarik pada property yang akan dijual oleh masyarakat, sehingga hanya **Property dengan kategori `Available`** saja yang digunakan untuk proses analisis dan modelling.
+2. Dalam pemodelan Unsupervised Clustering, saya menggunakan **11 kolom dan 3929 baris data** yang relevan terhadap pemodelan.
+  ![Dataframe Model](https://user-images.githubusercontent.com/99151517/162691793-a06eb8c9-ebc8-4f7f-ae14-45d2ce32cd93.JPG)
+3. Terdapat dua jenis Pre-Processing untuk mencari nilai PCA terbaik:
+    * **Pre-processing (Semua dengan Proses Scaling)**, pada jenis Pre-Processing ini semua data numerik melewati proses scaling. Algoritma PCA digunakan untuk melihat berapa banyak informasi yang tersimpan pada proses ini dan proses ini menyimpan informasi pada 2 komponen pertama sebesar **63.43 %**.
+    * **Pre-processing (Beberapa dengan Proses Scaling)**, pada jenis Pre-Processing ini hanya kolom Price saja yang melewati proses scaling. Algoritma PCA digunakan untuk melihat berapa banyak informasi yang tersimpan pada proses ini dan proses ini menyimpan informasi pada 2 komponen pertama sebesar **99.68 %**.
+   Proses PCA menggunakan Pre-Processing kedua dipilih karena menyimpan informasi yang paling banyak (99.68%)
+4. Algoritma yang digunakan pada proses Unsupervised Learning adalah **K-Means Clustering**.
+5. Berdasarkan algoritma K-Means Clusering, **jumlah cluster optimum adalah 5 Cluster** dengan **silhouette score 0.63**.
+  ![Clustering](https://user-images.githubusercontent.com/99151517/162692036-da86df87-ed60-4410-9481-cb34fd73cbb6.JPG)
+  ![Silhouette score](https://user-images.githubusercontent.com/99151517/162692045-0a663a53-6808-4558-9ae0-bd0a01f19e00.JPG)
+6. Feature Engineering digunakan untuk memudahkan dalam proses analisa hasil model. Feature Engineering yang digunakan berupa kategorisasi data numerik. Hasil dari feature engineering ini adalah kolom `RangePrice`, `CategorizedRooms`, `CategorizedLandsize`, `CategorizedBuildingArea`, dan `CityDistance`.
+7. Penjualan property terbanyak ada pada rentang bulan **Maret-September** atau pada musim **Fall-Winter**.
+  ![Month](https://user-images.githubusercontent.com/99151517/162692365-7ec79499-b70e-4cf2-a046-f96ab9a9c9ed.JPG)
+  ![Season](https://user-images.githubusercontent.com/99151517/162692363-44f3b337-b884-4b6d-b51d-5f8b1b98d5eb.JPG)
+8. Property yang dapat diperjual belikan paling banyak terdapat pada region Southern Metropolitan, kedua berada pada Northern Metropolitan, ketiga pada Western Metropolitan, dan keempat pada Eastern Metropolitan.
+  ![Region](https://user-images.githubusercontent.com/99151517/162692568-baf1c12a-f016-4b28-9241-e4d46c07cb32.JPG)
+9. Dalam proses mengenali karakteristik dari setiap cluster, pertama dilakukan analisis secara umum dan sederhana berdasarkan statistik deskriptif pada setiap cluster.
+  ![Deskriptif](https://user-images.githubusercontent.com/99151517/162693202-29e8c957-a292-479c-948a-347441870050.JPG)
+10. Analisis Multivariate dilakukan untuk lebih mengetahui bagaimana karakteristik dari setiap cluster.
+  ![BuildingArea](https://user-images.githubusercontent.com/99151517/162693362-4f7383be-d56e-4d40-ac0d-f5ebc164df2f.JPG)
+  ![Distance](https://user-images.githubusercontent.com/99151517/162693369-0a2bca44-1cf5-42d1-a758-685f15fe7a48.JPG)
+  ![Landsize](https://user-images.githubusercontent.com/99151517/162693372-677c1dab-66da-45b6-a351-5398b754d0f0.JPG)
+11. Berikut adalah hasil analisis singkat mengenai karakteristik dari masing-masing cluster:
+    1. **Cluster 1**: Dominasi oleh property perumahan dengan harga yang lumayan tinggi, jumlah ruangan yang cukup banyak dengan luas bangunan yang cukup besar dan luas tanah yang luas. Cluster ini cocok untuk para warga kota dengan kemampuan ekonomi menengah keatas.
+  ![Cluster 1 All](https://user-images.githubusercontent.com/99151517/162693483-174a078c-ee5b-4933-9e6d-5338cee68d29.JPG)
+  ![Cluster 1 Price Range](https://user-images.githubusercontent.com/99151517/162693825-a2fdcba4-fddf-478c-8ff5-5f1f8d4922cf.JPG)
+    2. **Cluster 2**: Dominasi oleh duplex atau apartment dengan harga murah, jumlah ruangan yang sedikit dengan luas tanah dan bangunan yang kecil namun sangat dekat dengan CBD. Cluster ini cocok untuk para warga kota dengan kemampuan ekonomi menengah kebawah atau para pekerja kantoran.
+  ![Cluster 2 All](https://user-images.githubusercontent.com/99151517/162693498-502d64d4-0764-46bf-a3b1-c9ea133ab4de.JPG)
+  ![Cluster 2 Price Range](https://user-images.githubusercontent.com/99151517/162693830-55ef790d-9734-4e72-ad48-db7980975b1c.JPG)
+    3. **Cluster 3**: Dominasi oleh pemukiman warga dengan harga yang sangat mahal (mansion atau villa mewah). Mayoritas cluster ini memiliki jumlah ruangan yang banyak dengan luas tanah yang besar dan luas bangunan sangat besar. Cluster ini cocok untuk para warga kota dengan kemampuan ekonomi kelas atas hingga kaya raya.
+  ![Cluster 3 All](https://user-images.githubusercontent.com/99151517/162693517-57487a82-b0d7-48b9-b4e6-27339f642278.JPG)
+  ![Cluster 3 Price Range](https://user-images.githubusercontent.com/99151517/162693833-79cf95a7-d337-491d-ae39-f878ce13bab9.JPG)
+    4. **Cluster 4**: Dominasi oleh property berupa perumahan dengan harga yang sedang, jumlah ruangan yang sedang dengan luas tanah dan bangunan yang tidak terlalu besar hingga sedang. Cluster ini cocok untuk para warga kota dengan kemampuan ekonomi menengah, hingga menengah kebawah.
+  ![Cluster 4 All](https://user-images.githubusercontent.com/99151517/162693528-29f3644e-7e3e-4511-9644-00a72bb77a77.JPG)
+  ![Cluster 4 Price Range](https://user-images.githubusercontent.com/99151517/162693836-56f96b5a-cf89-434a-ab92-8cfa2a1b49c9.JPG)
+    5. **Cluster 5**: Dominasi oleh pemukiman warga dengan harga yang sangat mahal (villa atau cottage mewah). Mayoritas cluster ini memiliki jumlah ruangan yang banyak dengan luas tanah dan luas bangunan yang sangat besar. Mayoritas jarak pada cluster ini cukup jauh dengan pusat kota. Cluster ini cocok untuk para warga kota dengan kemampuan ekonomi kelas atas hingga kaya raya.
+  ![Cluster 5 All](https://user-images.githubusercontent.com/99151517/162693547-5642e3de-609e-4ac9-bcbb-5681fe57260a.JPG)
+  ![Cluster 5 Price Range](https://user-images.githubusercontent.com/99151517/162693844-b9e77eac-0616-48d6-9edb-00f536623cac.JPG)
+12. Tableau Public digunakan untuk menganalisis dan memvisualisasikan persebaran setiap Cluster dan property berdasarkan persebaran geografis. Dashboard Tableau tersebut dapat dilihat pada link berikut [**(Tableau Visualization)**](https://public.tableau.com/app/profile/muh.rivaldi.prabowo/viz/MelbourneAvailablePropertyGeospatialInformationDashboard/GeographicalInfromation?publish=yes)
+11. Analisa dan modelling menggunakan Unsupervised Learning: Clustering sangat membantu perusahaan agen property dalam mengenali keadaan sebenarnya dari pasar property Kota Melbourne, mulai dari property mana saja yang dapat dijual pada Kota Melbourne, kapan transaksi jual beli property banyak terjadi, mengenali karakteristik dari setiap kluster property, segmentasi calon pembeli property berdasarkan kluster property, hingga mengetahui persebaran setiap property pada Kota Melbourne.
+  </p>
+  
