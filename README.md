@@ -82,26 +82,37 @@ Berdasarkan penjelasan bisnis proses diatas, kita bisa menyimpulkan bahwa perusa
 11. Berikut adalah hasil analisis singkat mengenai karakteristik dari masing-masing cluster:
     1. **Cluster 1**: Dominasi oleh property perumahan dengan harga yang lumayan tinggi, jumlah ruangan yang cukup banyak dengan luas bangunan yang cukup besar dan luas tanah yang luas. Cluster ini cocok untuk para warga kota dengan kemampuan ekonomi menengah keatas.
   ![Cluster 1 All](https://user-images.githubusercontent.com/99151517/162693483-174a078c-ee5b-4933-9e6d-5338cee68d29.JPG)
-  ![Cluster 1 Price Range](https://user-images.githubusercontent.com/99151517/162693825-a2fdcba4-fddf-478c-8ff5-5f1f8d4922cf.JPG)
   
     2. **Cluster 2**: Dominasi oleh duplex atau apartment dengan harga murah, jumlah ruangan yang sedikit dengan luas tanah dan bangunan yang kecil namun sangat dekat dengan CBD. Cluster ini cocok untuk para warga kota dengan kemampuan ekonomi menengah kebawah atau para pekerja kantoran.
   ![Cluster 2 All](https://user-images.githubusercontent.com/99151517/162693498-502d64d4-0764-46bf-a3b1-c9ea133ab4de.JPG)
-  ![Cluster 2 Price Range](https://user-images.githubusercontent.com/99151517/162693830-55ef790d-9734-4e72-ad48-db7980975b1c.JPG)
   
     3. **Cluster 3**: Dominasi oleh pemukiman warga dengan harga yang sangat mahal (mansion atau villa mewah). Mayoritas cluster ini memiliki jumlah ruangan yang banyak dengan luas tanah yang besar dan luas bangunan sangat besar. Cluster ini cocok untuk para warga kota dengan kemampuan ekonomi kelas atas hingga kaya raya.
   ![Cluster 3 All](https://user-images.githubusercontent.com/99151517/162693517-57487a82-b0d7-48b9-b4e6-27339f642278.JPG)
-  ![Cluster 3 Price Range](https://user-images.githubusercontent.com/99151517/162693833-79cf95a7-d337-491d-ae39-f878ce13bab9.JPG)
   
     4. **Cluster 4**: Dominasi oleh property berupa perumahan dengan harga yang sedang, jumlah ruangan yang sedang dengan luas tanah dan bangunan yang tidak terlalu besar hingga sedang. Cluster ini cocok untuk para warga kota dengan kemampuan ekonomi menengah, hingga menengah kebawah.
   ![Cluster 4 All](https://user-images.githubusercontent.com/99151517/162693528-29f3644e-7e3e-4511-9644-00a72bb77a77.JPG)
-  ![Cluster 4 Price Range](https://user-images.githubusercontent.com/99151517/162693836-56f96b5a-cf89-434a-ab92-8cfa2a1b49c9.JPG)
   
     5. **Cluster 5**: Dominasi oleh pemukiman warga dengan harga yang sangat mahal (villa atau cottage mewah). Mayoritas cluster ini memiliki jumlah ruangan yang banyak dengan luas tanah dan luas bangunan yang sangat besar. Mayoritas jarak pada cluster ini cukup jauh dengan pusat kota. Cluster ini cocok untuk para warga kota dengan kemampuan ekonomi kelas atas hingga kaya raya.
   ![Cluster 5 All](https://user-images.githubusercontent.com/99151517/162693547-5642e3de-609e-4ac9-bcbb-5681fe57260a.JPG)
-  ![Cluster 5 Price Range](https://user-images.githubusercontent.com/99151517/162693844-b9e77eac-0616-48d6-9edb-00f536623cac.JPG)
   
 12. Tableau Public digunakan untuk menganalisis dan memvisualisasikan persebaran setiap Cluster dan property berdasarkan persebaran geografis. Dashboard Tableau tersebut dapat dilihat pada link berikut [**(Tableau Visualization)**](https://public.tableau.com/app/profile/muh.rivaldi.prabowo/viz/MelbourneAvailablePropertyGeospatialInformationDashboard/GeographicalInfromation?publish=yes)
   
 13. Analisa dan modelling menggunakan Unsupervised Learning: Clustering sangat membantu perusahaan agen property dalam mengenali keadaan sebenarnya dari pasar property Kota Melbourne, mulai dari property mana saja yang dapat dijual pada Kota Melbourne, kapan transaksi jual beli property banyak terjadi, mengenali karakteristik dari setiap kluster property, segmentasi calon pembeli property berdasarkan kluster property, hingga mengetahui persebaran setiap property pada Kota Melbourne.
   </p>
   
+## Rekomendasi untuk Perusahaan Property
+<p align='justify' style="font-weight: bold;">
+1. Lakukan proses marketing dan pemasaran yang gencar terutama pada rentang bulan Maret-September dimana pada bulan-bulan tersebut banyak terjadi transaksi jual-beli property.
+2. Batasi daerah pemasaran dan operasi berdasarkan jumlah property yang dijual pada region tertentu. Saya menyarankan gencarkan bagian pemasaran pada region Southern Metropolitan, Northern Metropolitan, Western Metropolitan, dan terakhir pada Eastern Metropolitan.
+3. Sesuaikan rekomendasi property kepada customer berdasarkan profil dari customer lalu sesuaikan dengan Cluster property yang ada, contoh:
+    * **Customer dengan kemampuan ekonomi menengah keatas dan ingin memiliki property dapat diarahkan untuk melihat property Cluster 1.**
+    * **Customer dengan kemampuan ekonomi menengah kebawah atau para pekerja kantoran yang ingin memiliki property dekat dengan kantornya dapat diarahkan untuk melihat property Cluster 2.**
+    * **Customer dengan kemampuan ekonomi kelas atas hingga kaya raya dan ingin memiliki perumahan mewah bertingkat dan dekat dengan kota dapat diarahkan untuk melihat property Cluster 3.**
+    * **Customer dengan kemampuan ekonomi menengah dan ingin memiliki perumahan sederhana dapat diarahkan untuk melihat property Cluster 4.**
+    * **Customer dengan kemampuan ekonomi kelas atas hingga kaya raya dan ingin memiliki property mewah namun jauh dari hiruk-pikuk perkotaan dapat diarahkan untuk melihat property Cluster 5.**
+4. Dahsboard pada Tableau Public dapat digunakan untuk menyeleksi spesifikasi pada setiap property.
+5. Perusahaan Property juga harus jeli dalam mengakuisisi property yang akan dijual, contohnya:
+    * Property dengan yang baru saja ditawar oleh perusahaan property lain (Method Vendor Bid) pada pelelangan dapat diambil oleh kita dengan cara menawar property pada harga lebih tinggi jika memang propertynya bagus untuk dijual kembali.
+    * Selalu update mengenai property mana yang masuk ke dalam pelelangan (Method Property In), jika property menarik maka boleh ditawar dengan harga tinggi.
+    * Perbanyak pemasaran dan iklan mengenai keuntungan menjual property pada perusahaan ini dibandingkan di perusahaan lain, sehingga masyarakat yang akan menjual property akan tertarik memakai jasa perusahaan ini.
+    </p>
