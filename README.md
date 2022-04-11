@@ -44,6 +44,7 @@ Berdasarkan penjelasan bisnis proses diatas, kita bisa menyimpulkan bahwa perusa
 
 ## Hasil Modelling dan Analisis Property pada Kota Melbourne
 <p align='justify' style="font-weight: bold;">
+  
 1. **Data yang digunakan** pada proses analisis dan pemodelan hanya menggunakan data property yang sekiranya **dapat dijual dan dapat di akuisisi oleh pihak Perusahaan Property (Method: SP,PI,SA,VB)**. Karena berdasarkan bisnis proses, perusahaan agen property hanya tertarik pada property yang akan dijual oleh masyarakat, sehingga hanya **Property dengan kategori `Available`** saja yang digunakan untuk proses analisis dan modelling.
   
 2. Dalam pemodelan Unsupervised Clustering, saya menggunakan **11 kolom dan 3929 baris data** yang relevan terhadap pemodelan.
