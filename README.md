@@ -6,6 +6,7 @@
 
 ## Latar Belakang dan Pernyataan Masalah
 <p align='justify' style="font-weight: bold;">
+  
 Pandemi Covid-19 yang terjadi di seluruh dunia telah berdampak pada semua sektor kehidupan dan industri, salah satunya adalah di sektor industri property. Berdasarkan website <a href="https://www.abc.net.au/news/2022-03-24/six-ways-pandemic-reshaped-australias-housing-market-corelogic/100933182#:~:text=According%20to%20CoreLogic's%20Home%20Value,by%20%24173%2C805%2C%20to%20be%20%24728%2C034.)">(sumber informasi)</a> pada saat awal pandemi dari awal April hingga September 2020 harga property di Australia rata-rata turun hingga 2,1% akan tetapi pada awal Oktober 2020 hingga Februari 2022 harga rumah melonjak naik hingga 24.6% dan juga terdapat lonjakan dari jumlah pembeli property selama rentang tersebut. Hal ini juga tidak terlepas dari kebijakan Bank Sentral Australia yang memberlakukan relaksasi bunga bank selama rentang waktu 2020 hingga 2024 serta berbagai stimulus lainnya. 
 
 Berdasarkan peningkatan gairah pasar property di Australia seperti yang telah dijelaskan sebelumnya, sebuah perusahaan agen property yang telah beroperasi di berbagai *Capital City* di Australia, seperti Sydney, Brisbane, Adelaide, dan Perth akan membuka kantor barunya di Melbourne sebagai salah satu *Capital City* di Australia. Pihak management perusahaan tersebut menilai bahwa pasar property Kota Melbourne memiliki potensi yang sangat bagus di masa depan. Hal ini berdasarkan kepada keadaan Kota Melbourne yang telah bebas dari *lockdown*, peningkatan konsumsi masyarakat, peningkatan sektor ekonomi, dan banyaknya lapangan pekerjaan yang dibuka [(sumber informasi)](https://propertyupdate.com.au/property-investment-melbourne/#is-it-the-right-time-to-get-into-the-melbourne-property-market).
@@ -17,6 +18,7 @@ Dataset yang digunakan dalam project ini berasal dari website Kaggle [(Kaggle)](
   
 ## Pemahaman Kondisi Property dan Analisis Bisnis Proses pada Kota Melbourne
 <p align='justify' style="font-weight: bold;">
+  
 Asumsi dan interpretasi dari keadaan pasar property Kota Melbourne:            
 
 * Pada Kota Melbourne, sepertinya property **dapat dijual secara langsung ataupun dapat dijual melalui pelelangan kota.**
