@@ -102,15 +102,20 @@ Berdasarkan penjelasan bisnis proses diatas, kita bisa menyimpulkan bahwa perusa
   
 ## Rekomendasi untuk Perusahaan Property
 <p align='justify' style="font-weight: bold;">
+  
 1. Lakukan proses marketing dan pemasaran yang gencar terutama pada rentang bulan Maret-September dimana pada bulan-bulan tersebut banyak terjadi transaksi jual-beli property.
+  
 2. Batasi daerah pemasaran dan operasi berdasarkan jumlah property yang dijual pada region tertentu. Saya menyarankan gencarkan bagian pemasaran pada region Southern Metropolitan, Northern Metropolitan, Western Metropolitan, dan terakhir pada Eastern Metropolitan.
+  
 3. Sesuaikan rekomendasi property kepada customer berdasarkan profil dari customer lalu sesuaikan dengan Cluster property yang ada, contoh:
     * **Customer dengan kemampuan ekonomi menengah keatas dan ingin memiliki property dapat diarahkan untuk melihat property Cluster 1.**
     * **Customer dengan kemampuan ekonomi menengah kebawah atau para pekerja kantoran yang ingin memiliki property dekat dengan kantornya dapat diarahkan untuk melihat property Cluster 2.**
     * **Customer dengan kemampuan ekonomi kelas atas hingga kaya raya dan ingin memiliki perumahan mewah bertingkat dan dekat dengan kota dapat diarahkan untuk melihat property Cluster 3.**
     * **Customer dengan kemampuan ekonomi menengah dan ingin memiliki perumahan sederhana dapat diarahkan untuk melihat property Cluster 4.**
     * **Customer dengan kemampuan ekonomi kelas atas hingga kaya raya dan ingin memiliki property mewah namun jauh dari hiruk-pikuk perkotaan dapat diarahkan untuk melihat property Cluster 5.**
+  
 4. Dahsboard pada Tableau Public dapat digunakan untuk menyeleksi spesifikasi pada setiap property.
+  
 5. Perusahaan Property juga harus jeli dalam mengakuisisi property yang akan dijual, contohnya:
     * Property dengan yang baru saja ditawar oleh perusahaan property lain (Method Vendor Bid) pada pelelangan dapat diambil oleh kita dengan cara menawar property pada harga lebih tinggi jika memang propertynya bagus untuk dijual kembali.
     * Selalu update mengenai property mana yang masuk ke dalam pelelangan (Method Property In), jika property menarik maka boleh ditawar dengan harga tinggi.
